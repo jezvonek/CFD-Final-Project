@@ -1,0 +1,160 @@
+/work/05113/danieler/stampede2/CFD-Final-Project/circular-cylinder-10-20
+Mon May 11 01:16:07 CDT 2020
+/*---------------------------------------------------------------------------*\
+  =========                 |
+  \\      /  F ield         | OpenFOAM: The Open Source CFD Toolbox
+   \\    /   O peration     | Website:  https://openfoam.org
+    \\  /    A nd           | Version:  6.0
+     \\/     M anipulation  |
+\*---------------------------------------------------------------------------*/
+Build  : 6.0
+Exec   : blockMesh
+Date   : May 11 2020
+Time   : 01:16:08
+Host   : "c422-022.stampede2.tacc.utexas.edu"
+PID    : 27972
+I/O    : uncollated
+Case   : /work/05113/danieler/stampede2/CFD-Final-Project/circular-cylinder-10-20
+nProcs : 1
+sigFpe : Enabling floating point exception trapping (FOAM_SIGFPE).
+fileModificationChecking : Monitoring run-time modified files using timeStampMaster (fileModificationSkew 10)
+allowSystemOperations : Allowing user-supplied system call operations
+
+// * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * //
+Create time
+
+Deleting polyMesh directory
+    "/work/05113/danieler/stampede2/CFD-Final-Project/circular-cylinder-10-20/constant/polyMesh"
+Creating block mesh from
+    "/work/05113/danieler/stampede2/CFD-Final-Project/circular-cylinder-10-20/system/blockMeshDict"
+Creating block edges
+No non-planar block faces defined
+Creating topology blocks
+Creating topology patches
+
+Creating block mesh topology
+
+Check topology
+
+	Basic statistics
+		Number of internal faces : 28
+		Number of boundary faces : 64
+		Number of defined boundary faces : 64
+		Number of undefined boundary faces : 0
+	Checking patch -> block consistency
+
+Creating block offsets
+Creating merge list /*---------------------------------------------------------------------------*\
+  =========                 |
+  \\      /  F ield         | OpenFOAM: The Open Source CFD Toolbox
+   \\    /   O peration     | Website:  https://openfoam.org
+    \\  /    A nd           | Version:  6.0
+     \\/     M anipulation  |
+\*---------------------------------------------------------------------------*/
+Build  : 6.0
+Exec   : checkMesh
+Date   : May 11 2020
+Time   : 01:16:09
+Host   : "c422-022.stampede2.tacc.utexas.edu"
+PID    : 27979
+I/O    : uncollated
+Case   : /work/05113/danieler/stampede2/CFD-Final-Project/circular-cylinder-10-20
+nProcs : 1
+sigFpe : Enabling floating point exception trapping (FOAM_SIGFPE).
+fileModificationChecking : Monitoring run-time modified files using timeStampMaster (fileModificationSkew 10)
+allowSystemOperations : Allowing user-supplied system call operations
+
+// * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * //
+Create time
+
+Create polyMesh for time = 0
+
+/*---------------------------------------------------------------------------*\
+  =========                 |
+  \\      /  F ield         | OpenFOAM: The Open Source CFD Toolbox
+   \\    /   O peration     | Website:  https://openfoam.org
+    \\  /    A nd           | Version:  6.0
+     \\/     M anipulation  |
+\*---------------------------------------------------------------------------*/
+Build  : 6.0
+Exec   : decomposePar
+Date   : May 11 2020
+Time   : 01:16:10
+Host   : "c422-022.stampede2.tacc.utexas.edu"
+PID    : 27988
+I/O    : uncollated
+Case   : /work/05113/danieler/stampede2/CFD-Final-Project/circular-cylinder-10-20
+nProcs : 1
+sigFpe : Enabling floating point exception trapping (FOAM_SIGFPE).
+fileModificationChecking : Monitoring run-time modified files using timeStampMaster (fileModificationSkew 10)
+allowSystemOperations : Allowing user-supplied system call operations
+
+// * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * //
+Create time
+
+
+
+Decomposing mesh region0
+
+Create mesh
+TACC:  Starting up job 5678647 
+TACC:  Starting parallel tasks... 
+/*---------------------------------------------------------------------------*\
+  =========                 |
+  \\      /  F ield         | OpenFOAM: The Open Source CFD Toolbox
+   \\    /   O peration     | Website:  https://openfoam.org
+    \\  /    A nd           | Version:  6.0
+     \\/     M anipulation  |
+\*---------------------------------------------------------------------------*/
+Build  : 6.0
+Exec   : /home1/apps/intel18/impi18_0/OpenFOAM/OpenFOAM-6.0/platforms/linux64IccDPInt32Opt/bin/icoFoam -parallel
+Date   : May 11 2020
+Time   : 01:16:12
+Host   : "c422-022.stampede2.tacc.utexas.edu"
+PID    : 28055
+I/O    : uncollated
+Case   : /work/05113/danieler/stampede2/CFD-Final-Project/circular-cylinder-10-20
+nProcs : 4
+Slaves : 
+3
+(
+"c422-022.stampede2.tacc.utexas.edu.28056"
+"c422-022.stampede2.tacc.utexas.edu.28057"
+"c422-022.stampede2.tacc.utexas.edu.28058"
+)
+
+Pstream initialized with:
+    floatTransfer      : 0
+    nProcsSimpleSum    : 0
+    commsType          : nonBlocking
+    polling iterations : 0
+sigFpe : Enabling floating point exception trapping (FOAM_SIGFPE).
+fileModificationChecking : Monitoring run-time modified files using timeStampMaster (fileModificationSkew 10)
+allowSystemOperations : Allowing user-supplied system call operations
+
+// * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * //
+TACC:  MPI job exited with code: 1 
+TACC:  Shutdown complete. Exiting. 
+/*---------------------------------------------------------------------------*\
+  =========                 |
+  \\      /  F ield         | OpenFOAM: The Open Source CFD Toolbox
+   \\    /   O peration     | Website:  https://openfoam.org
+    \\  /    A nd           | Version:  6.0
+     \\/     M anipulation  |
+\*---------------------------------------------------------------------------*/
+Build  : 6.0
+Exec   : reconstructPar
+Date   : May 11 2020
+Time   : 01:16:12
+Host   : "c422-022.stampede2.tacc.utexas.edu"
+PID    : 28071
+I/O    : uncollated
+Case   : /work/05113/danieler/stampede2/CFD-Final-Project/circular-cylinder-10-20
+nProcs : 1
+sigFpe : Enabling floating point exception trapping (FOAM_SIGFPE).
+fileModificationChecking : Monitoring run-time modified files using timeStampMaster (fileModificationSkew 10)
+allowSystemOperations : Allowing user-supplied system call operations
+
+// * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * //
+Create time
+
