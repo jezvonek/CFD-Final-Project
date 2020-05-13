@@ -1,0 +1,331 @@
+/work/05113/danieler/stampede2/CFD-Final-Project/circular-cylinder-10-30
+Wed May 13 17:09:03 CDT 2020
+/*---------------------------------------------------------------------------*\
+  =========                 |
+  \\      /  F ield         | OpenFOAM: The Open Source CFD Toolbox
+   \\    /   O peration     | Website:  https://openfoam.org
+    \\  /    A nd           | Version:  6.0
+     \\/     M anipulation  |
+\*---------------------------------------------------------------------------*/
+Build  : 6.0
+Exec   : blockMesh
+Date   : May 13 2020
+Time   : 17:09:05
+Host   : "c401-012.stampede2.tacc.utexas.edu"
+PID    : 181881
+I/O    : uncollated
+Case   : /work/05113/danieler/stampede2/CFD-Final-Project/circular-cylinder-10-30
+nProcs : 1
+sigFpe : Enabling floating point exception trapping (FOAM_SIGFPE).
+fileModificationChecking : Monitoring run-time modified files using timeStampMaster (fileModificationSkew 10)
+allowSystemOperations : Allowing user-supplied system call operations
+
+// * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * //
+Create time
+
+Deleting polyMesh directory
+    "/work/05113/danieler/stampede2/CFD-Final-Project/circular-cylinder-10-30/constant/polyMesh"
+Creating block mesh from
+    "/work/05113/danieler/stampede2/CFD-Final-Project/circular-cylinder-10-30/system/blockMeshDict"
+Creating block edges
+No non-planar block faces defined
+Creating topology blocks
+Creating topology patches
+
+Creating block mesh topology
+
+Check topology
+
+	Basic statistics
+		Number of internal faces : 28
+		Number of boundary faces : 64
+		Number of defined boundary faces : 64
+		Number of undefined boundary faces : 0
+	Checking patch -> block consistency
+
+Creating block offsets
+Creating merge list .
+
+Creating polyMesh from blockMesh
+Creating points with scale 1
+    Block 0 cell size :
+        i : 0.05 .. 0.05
+        j : 0.0392592 .. 0.0392592
+        k : 1 .. 1
+
+    Block 1 cell size :
+        i : 0.0392592 .. 0.0392592
+        j : 0.05 .. 0.05
+        k : 1 .. 1
+
+    Block 2 cell size :
+        i : 0.0392592 .. 0.0392592
+        j : 0.0499924 .. 0.0499924
+        k : 1 .. 1
+
+    Block 3 cell size :
+        i : 0.05 .. 0.05
+        j : 0.0785183 .. 0.0785183
+        k : 1 .. 1
+
+    Block 4 cell size :
+        i : 0.0499924 .. 0.0499924
+        j : 0.0785183 .. 0.0785183
+        k : 1 .. 1
+
+    Block 5 cell size :
+        i : 0.0785183 .. 0.0785183
+        j : 0.0499924 .. 0.0499924
+        k : 1 .. 1
+
+    Block 6 cell size :
+        i : 0.0785183 .. 0.0785183
+        j : 0.05 .. 0.05
+        k : 1 .. 1
+
+    Block 7 cell size :
+        i : 0.0499924 .. 0.0499924
+        j : 0.0392592 .. 0.0392592
+        k : 1 .. 1
+
+    Block 8 cell size :
+        i : 0.26355 .. 1.0542
+        j : 0.0785183 .. 0.0785183
+        k : 1 .. 1
+
+    Block 9 cell size :
+        i : 0.270262 .. 1.08105
+        j : 0.126864 .. 0.507457
+        k : 1 .. 1
+
+    Block 10 cell size :
+        i : 0.0785183 .. 0.0785183
+        j : 0.11356 .. 0.454238
+        k : 1 .. 1
+
+    Block 11 cell size :
+        i : 0.0785183 .. 0.0785183
+        j : 0.126864 .. 0.507457
+        k : 1 .. 1
+
+    Block 12 cell size :
+        i : 0.27929 .. 0.27929
+        j : 0.126864 .. 0.507457
+        k : 1 .. 1
+
+    Block 13 cell size :
+        i : 0.25 .. 0.25
+        j : 0.07071 .. 0.07071
+        k : 1 .. 1
+
+    Block 14 cell size :
+        i : 0.27929 .. 0.27929
+        j : 0.07071 .. 0.07071
+        k : 1 .. 1
+
+    Block 15 cell size :
+        i : 0.27929 .. 0.27929
+        j : 0.507457 .. 0.126864
+        k : 1 .. 1
+
+    Block 16 cell size :
+        i : 0.07071 .. 0.07071
+        j : 0.507457 .. 0.126864
+        k : 1 .. 1
+
+    Block 17 cell size :
+        i : 0.07071 .. 0.07071
+        j : 0.454238 .. 0.11356
+        k : 1 .. 1
+
+    Block 18 cell size :
+        i : 0.270262 .. 1.08105
+        j : 0.507457 .. 0.126864
+        k : 1 .. 1
+
+    Block 19 cell size :
+        i : 0.270262 .. 1.08105
+        j : 0.0785183 .. 0.0785183
+        k : 1 .. 1
+
+Creating cells
+Creating patches
+
+Writing polyMesh
+----------------
+Mesh Information
+----------------
+  boundingBox: (-3.5 -3.5 0) (12.5 3.5 1)
+  nPoints: 5060
+  nCells: 2400
+  nFaces: 9730
+  nInternalFaces: 4670
+----------------
+Patches
+----------------
+  patch 0 (start: 4670 size: 40) name: inlet
+  patch 1 (start: 4710 size: 40) name: outlet
+  patch 2 (start: 4750 size: 50) name: top
+  patch 3 (start: 4800 size: 50) name: bottom
+  patch 4 (start: 4850 size: 80) name: cylinder
+  patch 5 (start: 4930 size: 4800) name: frontandback
+
+End
+
+/*---------------------------------------------------------------------------*\
+  =========                 |
+  \\      /  F ield         | OpenFOAM: The Open Source CFD Toolbox
+   \\    /   O peration     | Website:  https://openfoam.org
+    \\  /    A nd           | Version:  6.0
+     \\/     M anipulation  |
+\*---------------------------------------------------------------------------*/
+Build  : 6.0
+Exec   : checkMesh
+Date   : May 13 2020
+Time   : 17:09:06
+Host   : "c401-012.stampede2.tacc.utexas.edu"
+PID    : 181889
+I/O    : uncollated
+Case   : /work/05113/danieler/stampede2/CFD-Final-Project/circular-cylinder-10-30
+nProcs : 1
+sigFpe : Enabling floating point exception trapping (FOAM_SIGFPE).
+fileModificationChecking : Monitoring run-time modified files using timeStampMaster (fileModificationSkew 10)
+allowSystemOperations : Allowing user-supplied system call operations
+
+// * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * //
+Create time
+
+Create polyMesh for time = 0
+
+Time = 0
+
+Mesh stats
+    points:           5060
+    internal points:  0
+    faces:            9730
+    internal faces:   4670
+    cells:            2400
+    faces per cell:   6
+    boundary patches: 6
+    point zones:      0
+    face zones:       0
+    cell zones:       0
+
+Overall number of cells of each type:
+    hexahedra:     2400
+    prisms:        0
+    wedges:        0
+    pyramids:      0
+    tet wedges:    0
+    tetrahedra:    0
+    polyhedra:     0
+
+Checking topology...
+    Boundary definition OK.
+    Cell to face addressing OK.
+    Point usage OK.
+    Upper triangular ordering OK.
+    Face vertices OK.
+    Number of regions: 1 (OK).
+
+Checking patch topology for multiply connected surfaces...
+    Patch               Faces    Points   Surface topology                  
+    inlet               40       82       ok (non-closed singly connected)  
+    outlet              40       82       ok (non-closed singly connected)  
+    top                 50       102      ok (non-closed singly connected)  
+    bottom              50       102      ok (non-closed singly connected)  
+    cylinder            80       160      ok (non-closed singly connected)  
+    frontandback        4800     5060     ok (non-closed singly connected)  
+
+Checking geometry...
+    Overall domain bounding box (-3.5 -3.5 0) (12.5 3.5 1)
+    Mesh has 2 geometric (non-empty/wedge) directions (1 1 0)
+    Mesh has 2 solution (non-empty) directions (1 1 0)
+    All edges aligned with or perpendicular to non-empty directions.
+    Boundary openness (-1.63526e-18 9.40272e-18 -1.04237e-15) OK.
+    Max cell openness = 2.18433e-16 OK.
+    Max aspect ratio = 15.2885 OK.
+    Minimum face area = 0.00205925. Maximum face area = 1.08105.  Face area magnitudes OK.
+    Min volume = 0.00205925. Max volume = 0.548585.  Total volume = 111.215.  Cell volumes OK.
+    Mesh non-orthogonality Max: 41.969 average: 11.2951
+    Non-orthogonality check OK.
+    Face pyramids OK.
+    Max skewness = 0.47037 OK.
+    Coupled point location match (average 0) OK.
+
+Mesh OK.
+
+End
+
+/*---------------------------------------------------------------------------*\
+  =========                 |
+  \\      /  F ield         | OpenFOAM: The Open Source CFD Toolbox
+   \\    /   O peration     | Website:  https://openfoam.org
+    \\  /    A nd           | Version:  6.0
+     \\/     M anipulation  |
+\*---------------------------------------------------------------------------*/
+Build  : 6.0
+Exec   : decomposePar
+Date   : May 13 2020
+Time   : 17:09:08
+Host   : "c401-012.stampede2.tacc.utexas.edu"
+PID    : 181945
+I/O    : uncollated
+Case   : /work/05113/danieler/stampede2/CFD-Final-Project/circular-cylinder-10-30
+nProcs : 1
+sigFpe : Enabling floating point exception trapping (FOAM_SIGFPE).
+fileModificationChecking : Monitoring run-time modified files using timeStampMaster (fileModificationSkew 10)
+allowSystemOperations : Allowing user-supplied system call operations
+
+// * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * //
+Create time
+
+
+
+Decomposing mesh region0
+
+Create mesh
+
+Calculating distribution of cells
+Selecting decompositionMethod hierarchical
+TACC:  Starting up job 5692465 
+TACC:  Starting parallel tasks... 
+/*---------------------------------------------------------------------------*\
+  =========                 |
+  \\      /  F ield         | OpenFOAM: The Open Source CFD Toolbox
+   \\    /   O peration     | Website:  https://openfoam.org
+    \\  /    A nd           | Version:  6.0
+     \\/     M anipulation  |
+\*---------------------------------------------------------------------------*/
+Build  : 6.0
+Exec   : /home1/apps/intel18/impi18_0/OpenFOAM/OpenFOAM-6.0/platforms/linux64IccDPInt32Opt/bin/icoFoam -parallel
+Date   : May 13 2020
+Time   : 17:09:11
+Host   : "c401-012.stampede2.tacc.utexas.edu"
+PID    : 182023
+I/O    : uncollated
+TACC:  MPI job exited with code: 1 
+TACC:  Shutdown complete. Exiting. 
+/*---------------------------------------------------------------------------*\
+  =========                 |
+  \\      /  F ield         | OpenFOAM: The Open Source CFD Toolbox
+   \\    /   O peration     | Website:  https://openfoam.org
+    \\  /    A nd           | Version:  6.0
+     \\/     M anipulation  |
+\*---------------------------------------------------------------------------*/
+Build  : 6.0
+Exec   : reconstructPar
+Date   : May 13 2020
+Time   : 17:09:11
+Host   : "c401-012.stampede2.tacc.utexas.edu"
+PID    : 182046
+I/O    : uncollated
+Case   : /work/05113/danieler/stampede2/CFD-Final-Project/circular-cylinder-10-30
+nProcs : 1
+sigFpe : Enabling floating point exception trapping (FOAM_SIGFPE).
+fileModificationChecking : Monitoring run-time modified files using timeStampMaster (fileModificationSkew 10)
+allowSystemOperations : Allowing user-supplied system call operations
+
+// * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * //
+Create time
+

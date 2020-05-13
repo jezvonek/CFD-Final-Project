@@ -1,0 +1,36 @@
+
+Currently Loaded Modules:
+  1) intel/18.0.2   2) libfabric/1.7.0   3) impi/18.0.2   4) openfoam/6.0
+
+ 
+
+
+
+--> FOAM FATAL ERROR: 
+Wrong number of processor divisions in geomDecomp:
+Number of domains    : 3
+Wanted decomposition : (3 3 1)
+
+    From function Foam::geomDecomp::geomDecomp(const Foam::dictionary &, const Foam::word &)
+    in file geomDecomp/geomDecomp.C at line 46.
+
+FOAM exiting
+
+[0] 
+[0] 
+[0] --> FOAM FATAL ERROR: 
+[0] number of processor directories = 1 is not equal to the number of processors = 9
+[0] 
+FOAM parallel run exiting
+[0] 
+application called MPI_Abort(comm=0x84000004, 1) - process 0
+
+
+--> FOAM FATAL ERROR: 
+No processor* directories found
+
+    From function int main(int, char **)
+    in file reconstructPar.C at line 179.
+
+FOAM exiting
+
