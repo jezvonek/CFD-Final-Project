@@ -28,7 +28,7 @@
 #SBATCH -e of.e%j       # Name of stderr error file
 #SBATCH -p normal          # Queue (partition) name
 #SBATCH -N 1               # Total # of nodes
-#SBATCH -n 4               # Total # of mpi tasks
+#SBATCH -n 9               # Total # of mpi tasks
 #SBATCH -t 00:30:00        # Run time (hh:mm:ss)
 ###  #SBATCH --mail-user=youremail@utexas.edu
 ###  #SBATCH --mail-type=all    # Send email at begin and end of job
