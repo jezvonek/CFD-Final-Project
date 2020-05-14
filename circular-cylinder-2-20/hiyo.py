@@ -21,24 +21,21 @@ class Mesh:
         zs = []
         print("debug")
         for line in data:
+
             line = line.strip('(')
             line = line.strip(')')
             line = line.split()
             try:
-                line[2]=line[2][:-1]
                 line[0] = float(line[0])
-                line[1] = float(line[1])
-                line[2] = float(line[2])
                 xs.append(line[0])
-                ys.append(line[1])
-                zs.append(line[2])
             except:
                 continue
+        xs=xs[2::];
         return [xs,ys ,zs]
 
     def cylinder(self):
 
-        data=open(r"system\cyl_sizeockMeshDict")
+        data=open(r"system\blockMeshDict")
         hex=[]
         for line in data:
             line = line.strip('(')
@@ -54,49 +51,51 @@ class Mesh:
         D={}
         d=[]
         c=[]
+
+        print(self.U)
         for i in range(cyl_length):
             for j in range(cyl_length):
                 pos=cyl_size*0
-                d.append([self.U[0][pos+(j*cyl_length)+i],self.U[1][pos+(j*cyl_length)+i]])
+                d.append([self.U[0][pos+(j*cyl_length)+i]])
             c.extend(d)
             d=[]
             for j in range(cyl_length):
                 pos=cyl_size*1
-                d.append([self.U[0][pos+(j*cyl_length)+i],self.U[1][pos+(j*cyl_length)+i]])
+                d.append([self.U[0][pos+(j*cyl_length)+i]])
             d.reverse()
             c.extend(d)
             d = []
             for j in range(cyl_length):
                 pos=cyl_size*2
-                d.append([self.U[0][pos+(cyl_length*i)+j],self.U[1][pos+(cyl_length*i)+j]])
+                d.append([self.U[0][pos+(cyl_length*i)+j]])
             d.reverse()
             c.extend(d)
             d = []
             for j in range(cyl_length):
                 pos=cyl_size*3
-                d.append([self.U[0][pos+(cyl_length*i)+j],self.U[1][pos+(cyl_length*i)+j]])
+                d.append([self.U[0][pos+(cyl_length*i)+j]])
             d.reverse()
             c.extend(d)
             d = []
             for j in range(cyl_length):
                 pos=cyl_size*4
-                d.append([self.U[0][pos+(cyl_length*j)+cyl_length-1+i],self.U[1][pos+(cyl_length*j)+cyl_length-1+i]])
+                d.append([self.U[0][pos+(cyl_length*j)+cyl_length-1+i]])
             d.reverse()
             c.extend(d)
             d = []
             for j in range(cyl_length):
                 pos=cyl_size*5
-                d.append([self.U[0][pos+(cyl_length*j)+cyl_length-1+i],self.U[1][pos+(cyl_length*j)+cyl_length-1+i]])
+                d.append([self.U[0][pos+(cyl_length*j)+cyl_length-1+i]])
             c.extend(d)
             d = []
             for j in range(cyl_length):
                 pos=cyl_size*6
-                d.append([self.U[0][pos+(cyl_length*(cyl_length-1-i))+j],self.U[1][pos+(cyl_length*(cyl_length-1-i))+j]])
+                d.append([self.U[0][pos+(cyl_length*(cyl_length-1-i))+j]])
             c.extend(d)
             d = []
             for j in range(cyl_length):
                 pos=cyl_size*7
-                d.append([self.U[0][pos+(cyl_length*(cyl_length-1-i))+j],self.U[1][pos+(cyl_length*(cyl_length-1-i))+j]])
+                d.append([self.U[0][pos+(cyl_length*(cyl_length-1-i))+j]])
             c.extend(d)
             d = []
             D[str(i)]=c
@@ -128,31 +127,22 @@ def mean2(o,t):
 def plot(l):
     dist=[x/20 for x in range(1,20)]
     dist.insert(0,0)
-    print(dist)
     fig1, ax1 = plt.subplots()
     fig2, ax2 = plt.subplots()
 
     for angle in l:
         X=[]
-        Y=[]
-        for x,y in angle:
+        for x in angle:
             X.append(x)
-            Y.append(y)
         ## Tangential Velocity u component
         ax1.plot(dist,X)
         ax1.set_title(r'$U_\theta$')
         ax1.legend(['$\pi$/4',r" $\pi$/2 ",'3$\pi$/4'])
         ax1.set_ylabel("m/s")
         ax1.set_xlabel("distance from cylinder wall (m)")
-        ## Radial Velocity v component
-        ax2.plot(dist,Y)
-        ax2.set_title(r'$U_r$')
-        ax2.legend(['$\pi$/4', r" $\pi$/2 ", '3$\pi$/4'])
-        ax2.set_ylabel("m/s")
-        ax2.set_xlabel("distance from cylinder wall (m)")
     plt.show()
 def main(argv=None):
-    M=Mesh(argv[1])
+    M=Mesh("C:/Users/Daniel/Documents/CFD HW/CFD/circular-cylinder-2-20/w_20/75/p")
     l=velo(M)
     plot(l)
 if __name__ == "__main__":
