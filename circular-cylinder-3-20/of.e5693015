@@ -1,0 +1,14 @@
+
+Currently Loaded Modules:
+  1) intel/18.0.2   2) libfabric/1.7.0   3) impi/18.0.2   4) openfoam/6.0
+
+ 
+
+[0] 
+[0] 
+[0] --> FOAM FATAL ERROR: 
+[0] "/work/05113/danieler/stampede2/CFD-Final-Project/circular-cylinder-3-20/system/decomposeParDict" specifies 9 processors but job was started with 4 processors.
+[0] 
+FOAM parallel run exiting
+[0] 
+application called MPI_Abort(comm=0x84000004, 1) - process 0
